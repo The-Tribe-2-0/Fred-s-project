@@ -87,7 +87,7 @@
  padding: 10px;
  width: 300px;
  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
- background: url(https://cconnect.s3.amazonaws.com/wp-content/uploads/2023/02/2023-Topps-Now-Formula-1-Racing-Cards-800-thumb.jpg);
+display: inline-block; 
 }
 .heading {
 font-size: 24px;
