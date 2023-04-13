@@ -1,18 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>F1 Driver Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="project.css">
-  </head>
-  <body>
-    <h1>F1 Driver Search</h1>
-    <form id="search-form">
-      <label for="search-input">Search for an F1 driver:</label>
-      <input type="text" id="search-input">
-      <button type="submit" id="searchBtn">Search</button>
-    </form>
-    <div id="search-results"></div>
+    <img src="data:image/png;base64,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" alt="">
+    <title>Formula 1</title>
+   
+</head>
+<body>
+    <section>                                                                                                                                                                                                                                                         <div class="wrapper">
+        <div class="sidebar">
+       
+                <input type="text" id="search-btn" placeholder="search any driver" name="q">
+                <button id="root" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <img src="https://www.insidesport.in/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-02-at-00.07.45.jpg?w=690" alt="">
+            <h3>Get the latest info.of the 2022/2023 F1 racers.
+            <h2></h2> 
+          <div class="caz">
+            <ul>
+                <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fhips.hearstapps.com%2Fhmg-prod.s3.amazonaws.com%2Fimages%2Fred-bull-racings-dutch-driver-max-verstappen-steers-his-car-news-photo-1662727898.jpg%3Fcrop%3D1.00xw%3A0.847xh%3B0%2C0.0933xh%26resize%3D640%3A*&tbnid=qDMeN2Iisa5kiM&vet=12ahUKEwjo_bCjvJT-AhXAmycCHTBCDCIQMygcegUIARCZAg..i&imgrefurl=https%3A%2F%2Fwww.autoweek.com%2Fracing%2Fformula-1%2Fa41132696%2Fwhy-porsche-and-red-bulls-proposed-f1-engine-deal-for-2026-collapsed%2F&docid=HmqNisfnfRwoGM&w=640&h=362&q=red%20bull%20f1&ved=2ahUKEwjo_bCjvJT-AhXAmycCHTBCDCIQMygcegUIARCZAg">Red bull Racing</a></li>
+                <li><a href="https://www.google.com/search?q=mclaren+fmula+1&tbm=isch&ved=2ahUKEwih1dmOwpT-AhVyrEwKHWhaDPIQ2-cCegQIABAA&oq=mclaren+fmula+1&gs_lcp=CgNpbWcQAzoECCMQJzoHCAAQigUQQzoFCAAQgAQ6BwgAEBgQgARQwAVY4BpgzBxoAHAAeACAAf4CiAGuEJIBBTItNS4ymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=tVcuZOGmI_LYsgLotLGQDw&bih=973&biw=960">McLaren</li>
+                <li><a href="https://www.google.com/search?q=ferrari+formula+1&tbm=isch&ved=2ahUKEwj55_OUwpT-AhVqrycCHUZPDtAQ2-cCegQIABAA&oq=fer+formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BwgAEIoFEEM6BQgAEIAEUABY8wtg_i5oAHAAeACAAfECiAHqCZIBBTItMi4ymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=wlcuZPn-I-rensEPxp65gA0&bih=973&biw=960">Ferrari</li>
+                <li><a href="https://www.google.com/search?q=mercidez+formula+1&tbm=isch&ved=2ahUKEwjSh-a5wpT-AhXisEwKHdZjC5oQ2-cCegQIABAA&oq=mercidez+formula+1&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgAQ6BwgAEIoFEEM6CAgAEAUQBxAeUJsIWIovYMwzaABwAHgAgAH5AogB4xiSAQUyLTUuNZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=D1guZJLEOuLhsgLWx63QCQ&bih=973&biw=960">Mercedes</li>
+                <li><a href="https://www.google.com/search?q=alpine+formula+1&tbm=isch&ved=2ahUKEwjWiq_WwpT-AhX7rycCHX5EBF4Q2-cCegQIABAA&oq=alpformula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMggIABAFEAcQHjoECCMQJzoHCAAQigUQQzoFCAAQgARQrwpYqBVg7CVoAHAAeACAAesDiAGxDpIBBzItMS4zLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=S1guZJa5NfvfnsEP_oiR8AU&bih=973&biw=960">Alpine</li>
+                <li><a href="https://www.google.com/search?q=alfa+romeo+formula+1&tbm=isch&ved=2ahUKEwjr-YL6wpT-AhVgRKQEHTCQDJ0Q2-cCegQIABAA&oq=alfa++formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BQgAEIAEOgcIABAYEIAEOggIABAFEAcQHlDFCFiXHGCVM2gAcAB4AIABhQOIAcoTkgEFMi01LjOYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=llguZOvWJ-CIkdUPsKCy6Ak&bih=973&biw=960">Alfa Romero</li>
+                <li><a href="https://www.google.com/search?q=aston+martin+formula+1&tbm=isch&ved=2ahUKEwjTmMubw5T-AhVSrycCHc-DCsYQ2-cCegQIABAA&oq=aston+formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BQgAEIAEOgYIABAIEB46BAgAEB46BwgAEIoFEENQtDBY0kNg31RoAHAAeACAAZ4EiAH2FJIBBzMtNS4xLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=3VguZJO2AtLensEPz4eqsAw&bih=973&biw=960">Aston Martin</li>
+                <li><a href="https://www.google.com/search?q=Haas+formula+1&tbm=isch&ved=2ahUKEwjZ0PCqw5T-AhWqmycCHa16CuAQ2-cCegQIABAA&oq=Haas+formula+1&gs_lcp=CgNpbWcQAzIHCAAQigUQQzIHCAAQigUQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgQIIxAnOgYIABAHEB46CAgAEAUQBxAeOggIABAIEAcQHlCCC1iRIGCHJmgAcAB4AIAB4gKIAcwOkgEFMi0yLjSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=_VguZJneBqq3nsEPrfWpgA4&bih=973&biw=960">Haas</li>
+              </ul>
+              <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/News/20221123043818_2023-F1-drivers.jpg&c=0"/>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv_SqXm7C8JIEdFQe96HppJO9glJCu1VMM9w&usqp=CAU"/>
+        </div>
+    </div>
+</section>   
+    <!-- -Start of Section
+    <section >
+      <div id="container">
+      <div class="card">
+        <h1 class="heading">An F1 Driver's Description</h1>
+          <ul>
+            <img src="https://cconnect.s3.amazonaws.com/wp-content/uploads/2023/02/2023-Topps-Now-Formula-1-Racing-Cards-800-thumb.jpg" alt="img">
+            <li>driverId</li>
+            <li>url</li>
+            <li>givenName</li>
+            <li>familyName</li>
+            <li>dateOfBirth</li>
+            <li>nationality</li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+    <script src="https://kit.fontawesome.com/ae354c1edf.js" crossorigin="anonymous"></script> 
     <script src="project.js"></script>
-  </body>
+
+</body>
 </html>

@@ -1,48 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
-    padding: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  button[type="submit"] {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0069d9;
-  }
-  
-  #search-results {
-    margin-top: 20px;
-  }
-  
-  #search-results div {
-    padding: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
-  }
-  
+.body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkEEuhAwY-Mw3MVNDXwxdShIeLVCr_YVrA&usqp=CAU");
+}
+.sidebar img{
+    
+    padding-left: 30%;
+}
+.sidebar{
+    
+}
