@@ -1,10 +1,46 @@
-.body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkEEuhAwY-Mw3MVNDXwxdShIeLVCr_YVrA&usqp=CAU");
-}
+
 .sidebar img{
     
     padding-left: 30%;
 }
+
+
+button[type="submit"] {
+    padding: px 10px;
+    font-size: 20px;
+    background-color: #ff5c5c;
+    color: #ffffff;
+    border-radius: 100%;
+}
+      input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+        width: 100%;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
 .sidebar{
+    background-color: #ff0000;
+}
+.main{
     
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -0%);
+}
+.input{
+    border: 3px solid #32e17c;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+.caz{
+    border-bottom: #ffffff;
+    background-color: yellowgreen;
 }

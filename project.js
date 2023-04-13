@@ -27,31 +27,31 @@
 //       });
 //   }
 
-// const searchBtn = document.getElementById("search-btn");
+const searchBtn = document.getElementById("search-btn");
 
-// searchBtn.addEventListener("click", getDriver);
+searchBtn.addEventListener("click", getDriver);
 
-// function getDriver() {
-//   fetch("http://ergast.com/api/f1/drivers.json")
-//     .then(response => response.json())
-//     .then(data => {
-//       let html = "";
-//       data.forEach(driver => {
-//         html += `
-//           <div class="card">
-//             <div class="card-details">
-//               <h3>${driver.driverId}</h3>
-//               <h4>${driver.url}</h4>
-//             </div>
-//           </div>
-//         `;
-//       });
-//       document.getElementById("search-results").innerHTML = html;
-//     })
-//     .catch(error => {
-//       console.error(error);
-//     });
-// }
+function getDriver() {
+  fetch("http://ergast.com/api/f1/drivers.json")
+    .then(response => response.json())
+    .then(data => {
+      let html = "";
+      data.forEach(driver => {
+        html += `
+          <div class="card">
+            <div class="card-details">
+              <h3>${driver.driverId}</h3>
+              <h4>${driver.url}</h4>
+            </div>
+          </div>
+        `;
+      });
+      document.getElementById("search-results").innerHTML = html;
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
 
 
   
@@ -60,7 +60,7 @@ const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
 const searchBtn = document.getElementById("searchBtn");
 
-searchForm.addEventListener('click', (event) => {
+searchForm.addEventListener('submit', (event) => {
   event.preventDefault(); // prevent form submission
 
   const searchTerm = searchInput.value;
