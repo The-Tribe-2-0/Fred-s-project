@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="project.css">
-    
-    <title>Formula 1</title>
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel ="stylesheet" href="project.css">
 </head>
 <body>
-    <section>                                                                                                                                                                                                                                                         <div class="wrapper">
-        <div class="sidebar">
-       <img src="data:image/png;base64,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" alt="">
-            <h1><i>Formula One</i></h1>
-            <div class="main">
-                <input type="text" id="search-btn" placeholder="search any driver" name="q">
-            </div>
-          <div class="btn">
-            <button id="root" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-            <h3>Get the latest info.of the 2022/2023 F1 racers.
-          <div class="caz">
-            <ul>
-                <li><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fhips.hearstapps.com%2Fhmg-prod.s3.amazonaws.com%2Fimages%2Fred-bull-racings-dutch-driver-max-verstappen-steers-his-car-news-photo-1662727898.jpg%3Fcrop%3D1.00xw%3A0.847xh%3B0%2C0.0933xh%26resize%3D640%3A*&tbnid=qDMeN2Iisa5kiM&vet=12ahUKEwjo_bCjvJT-AhXAmycCHTBCDCIQMygcegUIARCZAg..i&imgrefurl=https%3A%2F%2Fwww.autoweek.com%2Fracing%2Fformula-1%2Fa41132696%2Fwhy-porsche-and-red-bulls-proposed-f1-engine-deal-for-2026-collapsed%2F&docid=HmqNisfnfRwoGM&w=640&h=362&q=red%20bull%20f1&ved=2ahUKEwjo_bCjvJT-AhXAmycCHTBCDCIQMygcegUIARCZAg">>>Red bull Racing</a></li>
-                <li><a href="https://www.google.com/search?q=mclaren+fmula+1&tbm=isch&ved=2ahUKEwih1dmOwpT-AhVyrEwKHWhaDPIQ2-cCegQIABAA&oq=mclaren+fmula+1&gs_lcp=CgNpbWcQAzoECCMQJzoHCAAQigUQQzoFCAAQgAQ6BwgAEBgQgARQwAVY4BpgzBxoAHAAeACAAf4CiAGuEJIBBTItNS4ymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=tVcuZOGmI_LYsgLotLGQDw&bih=973&biw=960">>>McLaren</li>
-                <li><a href="https://www.google.com/search?q=ferrari+formula+1&tbm=isch&ved=2ahUKEwj55_OUwpT-AhVqrycCHUZPDtAQ2-cCegQIABAA&oq=fer+formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BwgAEIoFEEM6BQgAEIAEUABY8wtg_i5oAHAAeACAAfECiAHqCZIBBTItMi4ymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=wlcuZPn-I-rensEPxp65gA0&bih=973&biw=960">>>Ferrari</li>
-                <li><a href="https://www.google.com/search?q=mercidez+formula+1&tbm=isch&ved=2ahUKEwjSh-a5wpT-AhXisEwKHdZjC5oQ2-cCegQIABAA&oq=mercidez+formula+1&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgAQ6BwgAEIoFEEM6CAgAEAUQBxAeUJsIWIovYMwzaABwAHgAgAH5AogB4xiSAQUyLTUuNZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=D1guZJLEOuLhsgLWx63QCQ&bih=973&biw=960">>>Mercedes</li>
-                <li><a href="https://www.google.com/search?q=alpine+formula+1&tbm=isch&ved=2ahUKEwjWiq_WwpT-AhX7rycCHX5EBF4Q2-cCegQIABAA&oq=alpformula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMggIABAFEAcQHjoECCMQJzoHCAAQigUQQzoFCAAQgARQrwpYqBVg7CVoAHAAeACAAesDiAGxDpIBBzItMS4zLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=S1guZJa5NfvfnsEP_oiR8AU&bih=973&biw=960">>>Alpine</li>
-                <li><a href="https://www.google.com/search?q=alfa+romeo+formula+1&tbm=isch&ved=2ahUKEwjr-YL6wpT-AhVgRKQEHTCQDJ0Q2-cCegQIABAA&oq=alfa++formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BQgAEIAEOgcIABAYEIAEOggIABAFEAcQHlDFCFiXHGCVM2gAcAB4AIABhQOIAcoTkgEFMi01LjOYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=llguZOvWJ-CIkdUPsKCy6Ak&bih=973&biw=960">>>Alfa Romero</li>
-                <li><a href="https://www.google.com/search?q=aston+martin+formula+1&tbm=isch&ved=2ahUKEwjTmMubw5T-AhVSrycCHc-DCsYQ2-cCegQIABAA&oq=aston+formula+1&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB46BAgjECc6BQgAEIAEOgYIABAIEB46BAgAEB46BwgAEIoFEENQtDBY0kNg31RoAHAAeACAAZ4EiAH2FJIBBzMtNS4xLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=3VguZJO2AtLensEPz4eqsAw&bih=973&biw=960">>>Aston Martin</li>
-                <li><a href="https://www.google.com/search?q=Haas+formula+1&tbm=isch&ved=2ahUKEwjZ0PCqw5T-AhWqmycCHa16CuAQ2-cCegQIABAA&oq=Haas+formula+1&gs_lcp=CgNpbWcQAzIHCAAQigUQQzIHCAAQigUQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgQIIxAnOgYIABAHEB46CAgAEAUQBxAeOggIABAIEAcQHlCCC1iRIGCHJmgAcAB4AIAB4gKIAcwOkgEFMi0yLjSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=_VguZJneBqq3nsEPrfWpgA4&bih=973&biw=960">>>Haas</li>
-              </ul>
-              <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/News/20221123043818_2023-F1-drivers.jpg&c=0"/>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv_SqXm7C8JIEdFQe96HppJO9glJCu1VMM9w&usqp=CAU"/>
-        </div>
-    </div>
-</section>   
-    <!-- -Start of Section
-    <section >
-      <div id="container">
-      <div class="card">
-        <h1 class="heading">An F1 Driver's Description</h1>
-          <ul>
-            <img src="https://cconnect.s3.amazonaws.com/wp-content/uploads/2023/02/2023-Topps-Now-Formula-1-Racing-Cards-800-thumb.jpg" alt="img">
-            <li>driverId</li>
-            <li>url</li>
-            <li>givenName</li>
-            <li>familyName</li>
-            <li>dateOfBirth</li>
-            <li>nationality</li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-    <script src="https://kit.fontawesome.com/ae354c1edf.js" crossorigin="anonymous"></script> 
-    <script src="project.js"></script>
+<div class="container">
+  <div class="meal-wrapper">
+    <div class="meal-search">
+      <h2 class="title">Find Meals For Your Ingredients</h2>
+      <blockquote> With Ingredients comes great meals. <br>
+      <cite> -Maxmiliano Fredrick Mwangi </cite>
+    </blockquote>
 
+    <div class="meal-search-box">
+      <input type="text" class = "search-control" placeholder="Enter an ingredient" id="search-input">
+      <button type="submit" class="search-btn btn" id="search-btn"><i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="meal-result">
+  <h2 class="title">Your Search Result</h2>
+  <div id="meal">
+    <!--- meal item--->
+    <!-- <div class="meal-item">
+      <div class="meal-img">
+        <img src="https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg" alt="food">
+      </div>
+      <div class="meal-name">
+        <h3>Potato Chips</h3>
+        <a href="#" class="recipe-btn">Get Recipe</a>
+      </div>
+    </div> -->
+    <!--- end of meal item--->
+  </div>
+</div>
+
+
+<div class="meal-details">
+  <!---- recipe close btn-->
+  <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <!---meal content-->
+  <div class="meal-detail-content">
+    <h2 class="recipe-title">Meals Name Here</h2>
+    <p class="recipe-category">Category Name</p>
+    <div class="recipe-instruct">
+      <h3>Instruction:</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptates distinctio eligendi impedit aspernatur libero deleniti repellat, autem vitae repudiandae saepe, quaerat quo sint eum quasi pariatur placeat facilis delectus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur distinctio atque. Voluptate odio, modi assumenda enim vero laudantium quasi.
+      </p>
+    </div>
+    <div class="recipe-meal-img">
+      <img src="https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg" alt="">
+    </div>
+    <div class="recipe-link">
+      <a href="#" target="_blank">Watch Video</a>
+    </div>
+  </div>
+</div>
+  <script src = "project.js"></script>
 </body>
 </html>
