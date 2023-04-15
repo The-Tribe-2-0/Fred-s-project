@@ -230,7 +230,14 @@
     opacity: 0.8;
 }
 
-
+/* */
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: #d65105;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
 
 
 
