@@ -1,13 +1,12 @@
 # phase-1-project
 # Fredrick Mwangi
 *****
-### Author : Fredrick Mwangi 10/4/2023
+### Author : Fredrick Mwangi 15/4/2023
 ****
 ## Project Description
-Formular One is an app that allows Formula 1 watchers to search for their drivers and receive a short synopsis on their driver of choice also, it allows people to view their favorite cars
-
+Do you have an ingredient and you don't know what to cook? Worry no further. This is basically an easy to navigate website that allows users to get access to their favourite meals and get theri recipes. 
 ## SCREENSHOTS
-Screenshot from 2023-04-10 13-51-53.png
+Screenshot from 2023-04-17 00-30-10.png
 - link 2
 
 
