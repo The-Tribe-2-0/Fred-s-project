@@ -1,6 +1,6 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
-const mealDetailsContent = document.querySelector('meal-detail-content');
+const mealDetailsContent = document.querySelector('meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close--btn');
 
 // event listeners
@@ -41,12 +41,35 @@ function getMealList(){
 
 
 // get recipe of the meal
-funtion getMealRecipe(e){
+function getMealRecipe(e){
   e.preventDefault();
   if(e.target.classList.contains('recipe-btn')){
       let mealItem = e.target.parentElement.parentElement; 
-      fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`);
-      then(response =>response.json())
-      .then(data => mealRecipeModel(data.meals));
+      fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+      .then(response =>response.json())
+      .then(data => mealRecipeModal(data.meals));
   }
+}
+
+// create a modal
+function mealRecipeModal(meal){
+  console.log(meal);
+  meal = meal[0];
+  let html = `
+    <h2 class="recipe-title">${meal.strMeal}</h2>
+    <p class="recipe-category">${meal.strCategory}</p>
+    <div class="recipe-instruct">
+    <h3>Instruction:</h3>
+    <p>${meal.strInstructions}</p> 
+    </div>
+    <div class="recipe-meal-img">
+        <img src="${meal.strThumb}" alt="">
+    </div>
+        <div class="recipe-link">
+        <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+    </div>
+  `;
+  mealDetailsContent.innerHTML = html;
+  mealDetailsContent.parentElement.classList.add
+  ('showRecipe');
 }
