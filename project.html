@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find Meal For Your Ingredients </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"/>
   <link rel ="stylesheet" href="project.css">
 </head>
 <body>
@@ -19,14 +19,32 @@
 
     <div class="meal-search-box">
       <input type="text" class = "search-control" placeholder="Enter an ingredient" id="search-input">
-      <button type="submit" class="search-btn btn" id="search-btn"><i class="fas fa-search"></i>
+      <button type="submit" class="search-btn btn" id="search-btn">
+        <i class="fas fa-search"></i>
       </button>
     </div>
   </div>
-</div>
+</div>      
+<div class="background-image"></div>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
 
+    .background-image{
+      background-image: url('https://www.authenticfoodquest.com/wp-content/uploads/2016/11/1200_DelicaciesInPampanga_AuthenticFoodQuest.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+
+
+
+  </style>
 <div class="meal-result">
-  <h2 class="title">Your Search Result</h2>
+  <h2 class="title">Your Search Result:</h2>
   <div id="meal">
     <!--- meal item--->
     <!-- <div class="meal-item">
@@ -35,37 +53,36 @@
       </div>
       <div class="meal-name">
         <h3>Potato Chips</h3>
-        <a href="#" class="recipe-btn">Get Recipe</a>
+        <a href = "#" class = "recipe-btn">Get Recipe</a>
       </div>
     </div> -->
-    <!--- end of meal item--->
-  </div>
-</div>
+    <!---end of meal item-->>
 
 
-<div class="meal-details">
-  <!---- recipe close btn-->
-  <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
-    <i class="fas fa-times"></i>
+<div class = "meal-details">
+  <!----recipe close btn---->
+  <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+    <i class = "fas fa-times"></i>
   </button>
 
-  <!---meal content-->
-  <div class="meal-detail-content">
-    <!-- <h2 class="recipe-title">Meals Name Here</h2>
-    <p class="recipe-category">Category Name</p>
-    <div class="recipe-instruct">
-      <h3>Instruction:</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptates distinctio eligendi impedit aspernatur libero deleniti repellat, autem vitae repudiandae saepe, quaerat quo sint eum quasi pariatur placeat facilis delectus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur distinctio atque. Voluptate odio, modi assumenda enim vero laudantium quasi.</p> 
+         <!---meal content-->
+      <div class = "meal-details-content">
+        <h2 class = "recipe-title">Meals Name Here</h2>
+         <p class = "recipe-category">Category Name</p>
+       <div class = "recipe-instruct">
+         <h3>Instructions:</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sed quasi, quisquam rerum porro in voluptatum alias voluptates maxime dolorum! Eligendi illum earum autem deleniti repellendus accusamus quidem hic perspiciatis? </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequuntur distinctio atque. Voluptate odio, modi assumenda enim vero laudantium quasi.</p> 
+      </div>
+    <div class = "recipe-meal-img">
+      <img src = "https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg" alt="">
     </div>
-    <div class="recipe-meal-img">
-      <img src="https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg" alt="">
+    <div class = "recipe-link">
+      <a href = "#" target="_blank">Watch Video</a>
     </div>
-    <div class="recipe-link">
-      <a href="#" target="_blank">Watch Video</a>
-    </div> -->
   </div>
 </div>
+
   <script src = "project.js"></script>
 </body>
 </html>
