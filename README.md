@@ -5,12 +5,7 @@
 ****
 ## Project Description
 Do you have an ingredient and you don't know what to cook? Worry no further. This is basically an easy to navigate website that allows users to get access to their favourite meals and get theri recipes. 
-## SCREENSHOTS
-Screenshot from 2023-04-17 00-30-10.png
-- link 2
 
-
-********
 ## SetUp Instruction
 ### Requirements
 * [Visual Studio Code](https://code.visualstudio.com/download)
